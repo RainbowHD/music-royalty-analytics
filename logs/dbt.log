@@ -1,0 +1,243 @@
+[0m17:20:36.489234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108deac90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ffc680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ffc3b0>]}
+
+
+============================== 17:20:36.492301 | 081d5596-243b-40d2-b426-e5a0084b1ef1 ==============================
+[0m17:20:36.492301 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:20:36.492607 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_colors': 'True', 'target_path': 'None', 'profiles_dir': '/Users/admin/.dbt', 'log_path': 'logs', 'empty': 'None', 'static_parser': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'write_json': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'debug': 'False', 'warn_error': 'None', 'no_print': 'None', 'introspect': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug'}
+[0m17:20:36.529359 [info ] [MainThread]: dbt version: 1.11.7
+[0m17:20:36.529579 [info ] [MainThread]: python version: 3.12.11
+[0m17:20:36.529716 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m17:20:36.529842 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m17:20:36.732877 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:20:36.733145 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:20:36.733295 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:20:36.812246 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m17:20:36.812534 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m17:20:36.812687 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m17:20:36.813105 [info ] [MainThread]: adapter type: snowflake
+[0m17:20:36.813292 [info ] [MainThread]: adapter version: 1.11.3
+[0m17:20:36.813442 [info ] [MainThread]: Configuration:
+[0m17:20:36.813568 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:20:36.813685 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:20:36.813799 [info ] [MainThread]: Required dependencies:
+[0m17:20:36.813954 [debug] [MainThread]: Executing "git --help"
+[0m17:20:36.830902 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:20:36.831605 [debug] [MainThread]: STDERR: "b''"
+[0m17:20:36.831865 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:20:36.832107 [info ] [MainThread]: Connection:
+[0m17:20:36.832342 [info ] [MainThread]:   account: https://wqb79730.snowflakecomputing.com
+[0m17:20:36.832671 [info ] [MainThread]:   user: rainbowhd
+[0m17:20:36.833405 [info ] [MainThread]:   database: dbt_db
+[0m17:20:36.833680 [info ] [MainThread]:   warehouse: dbt_wh
+[0m17:20:36.833879 [info ] [MainThread]:   role: dbt_role
+[0m17:20:36.834052 [info ] [MainThread]:   schema: dbt_schema
+[0m17:20:36.834230 [info ] [MainThread]:   authenticator: None
+[0m17:20:36.834715 [info ] [MainThread]:   oauth_client_id: None
+[0m17:20:36.834904 [info ] [MainThread]:   query_tag: None
+[0m17:20:36.835189 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:20:36.835372 [info ] [MainThread]:   host: None
+[0m17:20:36.835520 [info ] [MainThread]:   port: None
+[0m17:20:36.835686 [info ] [MainThread]:   proxy_host: None
+[0m17:20:36.835811 [info ] [MainThread]:   proxy_port: None
+[0m17:20:36.835929 [info ] [MainThread]:   protocol: None
+[0m17:20:36.836070 [info ] [MainThread]:   connect_retries: 1
+[0m17:20:36.836202 [info ] [MainThread]:   connect_timeout: None
+[0m17:20:36.836324 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:20:36.836440 [info ] [MainThread]:   retry_all: False
+[0m17:20:36.836549 [info ] [MainThread]:   insecure_mode: False
+[0m17:20:36.836664 [info ] [MainThread]:   reuse_connections: True
+[0m17:20:36.836772 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m17:20:36.836880 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m17:20:36.837378 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m17:20:36.905159 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:20:36.951114 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:20:36.951329 [debug] [MainThread]: On debug: select 1 as id
+[0m17:20:36.951493 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:20:38.174888 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:20:38.175168 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:20:38.175372 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:20:38.175592 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m17:20:38.175746 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml> not found
+
+[0m17:20:38.175896 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:20:38.176203 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.7257026, "process_in_blocks": "0", "process_kernel_time": 0.22353, "process_mem_max_rss": "135839744", "process_out_blocks": "0", "process_user_time": 0.821745}
+[0m17:20:38.176449 [debug] [MainThread]: Command `dbt debug` failed at 17:20:38.176393 after 1.73 seconds
+[0m17:20:38.176605 [debug] [MainThread]: Connection 'debug' was left open.
+[0m17:20:38.176740 [debug] [MainThread]: On debug: No close available on handle
+[0m17:20:38.176892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f95af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b40ec60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2dc950>]}
+[0m17:20:38.177099 [debug] [MainThread]: Flushing usage events
+[0m17:20:39.279157 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:23:08.379148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f2f350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107128c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d1c3e0>]}
+
+
+============================== 17:23:08.382200 | 71369bad-7949-4226-a0d0-2dcdac114148 ==============================
+[0m17:23:08.382200 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:23:08.382569 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'empty': 'None', 'write_json': 'True', 'static_parser': 'True', 'log_path': 'logs', 'log_format': 'default', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init music-royalty-analytics', 'fail_fast': 'False', 'profiles_dir': '/Users/admin/.dbt', 'no_print': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'debug': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'target_path': 'None', 'printer_width': '80', 'warn_error': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True'}
+[0m17:24:04.048462 [debug] [MainThread]: Starter project path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m17:24:04.065741 [info ] [MainThread]: 
+Your new dbt project "dbt_music_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:24:04.066382 [info ] [MainThread]: Setting up your profile.
+[0m17:25:04.094428 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:25:04.095504 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:25:04.095661 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:35:01.109803 [info ] [MainThread]: Profile dbt_music_analytics written to /Users/admin/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:35:01.126425 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 712.78845, "process_in_blocks": "0", "process_kernel_time": 0.23267, "process_mem_max_rss": "105136128", "process_out_blocks": "0", "process_user_time": 0.681039}
+[0m17:35:01.137444 [debug] [MainThread]: Command `dbt init` succeeded at 17:35:01.136600 after 712.80 seconds
+[0m17:35:01.139710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109725f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098bc710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093c7e60>]}
+[0m17:35:01.141051 [debug] [MainThread]: Flushing usage events
+[0m17:35:01.937299 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:28.376324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103dd72c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc4500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc4200>]}
+
+
+============================== 17:35:28.379179 | bfba9c9e-89c5-42b7-a746-12e97445dda5 ==============================
+[0m17:35:28.379179 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:35:28.379473 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/admin/.dbt', 'printer_width': '80', 'introspect': 'True', 'target_path': 'None', 'empty': 'None', 'use_colors': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True'}
+[0m17:35:28.387639 [info ] [MainThread]: dbt version: 1.11.7
+[0m17:35:28.387855 [info ] [MainThread]: python version: 3.12.11
+[0m17:35:28.388007 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m17:35:28.388141 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m17:35:28.618045 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:35:28.618306 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:35:28.618451 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:35:28.644635 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m17:35:28.644857 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m17:35:28.645028 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m17:35:28.645211 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:35:28.645472 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.305438, "process_in_blocks": "0", "process_kernel_time": 0.140406, "process_mem_max_rss": "128024576", "process_out_blocks": "0", "process_user_time": 0.693578}
+[0m17:35:28.645846 [debug] [MainThread]: Command `dbt debug` failed at 17:35:28.645792 after 0.31 seconds
+[0m17:35:28.646022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059987d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105603830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057880e0>]}
+[0m17:35:28.646208 [debug] [MainThread]: Flushing usage events
+[0m17:35:29.323053 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:50:24.995675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107108f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10916c620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10916c380>]}
+
+
+============================== 17:50:24.998917 | 00299888-48d6-46a6-882f-a0b76a2c6a5c ==============================
+[0m17:50:24.998917 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:50:24.999223 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'no_print': 'None', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/admin/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'debug': 'False', 'target_path': 'None', 'use_colors': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'printer_width': '80', 'fail_fast': 'False', 'invocation_command': 'dbt debug', 'introspect': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_format': 'default', 'empty': 'None', 'log_path': 'logs'}
+[0m17:50:25.008960 [info ] [MainThread]: dbt version: 1.11.7
+[0m17:50:25.009171 [info ] [MainThread]: python version: 3.12.11
+[0m17:50:25.009312 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m17:50:25.009437 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m17:50:25.211566 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:50:25.211829 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:50:25.211982 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:50:25.239603 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m17:50:25.239830 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m17:50:25.239987 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m17:50:25.240173 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:50:25.240434 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.2833387, "process_in_blocks": "0", "process_kernel_time": 0.167159, "process_mem_max_rss": "127270912", "process_out_blocks": "0", "process_user_time": 0.765846}
+[0m17:50:25.240744 [debug] [MainThread]: Command `dbt debug` failed at 17:50:25.240705 after 0.28 seconds
+[0m17:50:25.240901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10916c4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a5be90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e2d7c0>]}
+[0m17:50:25.241070 [debug] [MainThread]: Flushing usage events
+[0m17:50:25.741214 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:16:23.139889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10527bb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f304d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f301d0>]}
+
+
+============================== 18:16:23.143010 | f6b308a2-d69d-4cb7-bc4b-f9e0fb9079bd ==============================
+[0m18:16:23.143010 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:16:23.143331 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'empty': 'None', 'printer_width': '80', 'target_path': 'None', 'version_check': 'True', 'introspect': 'True', 'static_parser': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/admin/.dbt', 'no_print': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'write_json': 'True', 'debug': 'False', 'fail_fast': 'False'}
+[0m18:16:23.153036 [info ] [MainThread]: dbt version: 1.11.7
+[0m18:16:23.153230 [info ] [MainThread]: python version: 3.12.11
+[0m18:16:23.153373 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m18:16:23.153497 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m18:16:23.403358 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:16:23.411380 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:16:23.411807 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:16:23.498910 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m18:16:23.500587 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m18:16:23.502076 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m18:16:23.503251 [info ] [MainThread]: adapter type: snowflake
+[0m18:16:23.503438 [info ] [MainThread]: adapter version: 1.11.3
+[0m18:16:23.505014 [info ] [MainThread]: Configuration:
+[0m18:16:23.506244 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:16:23.507269 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:16:23.508129 [info ] [MainThread]: Required dependencies:
+[0m18:16:23.508634 [debug] [MainThread]: Executing "git --help"
+[0m18:16:23.533511 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:16:23.534337 [debug] [MainThread]: STDERR: "b''"
+[0m18:16:23.535273 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:16:23.535667 [info ] [MainThread]: Connection:
+[0m18:16:23.536744 [info ] [MainThread]:   account: AKNWSHL-RKB38605.snowflakecomputing.com
+[0m18:16:23.536998 [info ] [MainThread]:   user: RAINBOWHD
+[0m18:16:23.537527 [info ] [MainThread]:   database: music_db
+[0m18:16:23.538117 [info ] [MainThread]:   warehouse: music_wh
+[0m18:16:23.538522 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:16:23.538652 [info ] [MainThread]:   schema: music_schema
+[0m18:16:23.538978 [info ] [MainThread]:   authenticator: None
+[0m18:16:23.539184 [info ] [MainThread]:   oauth_client_id: None
+[0m18:16:23.539757 [info ] [MainThread]:   query_tag: None
+[0m18:16:23.539884 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:16:23.540004 [info ] [MainThread]:   host: None
+[0m18:16:23.540431 [info ] [MainThread]:   port: None
+[0m18:16:23.540614 [info ] [MainThread]:   proxy_host: None
+[0m18:16:23.541194 [info ] [MainThread]:   proxy_port: None
+[0m18:16:23.541479 [info ] [MainThread]:   protocol: None
+[0m18:16:23.542631 [info ] [MainThread]:   connect_retries: 1
+[0m18:16:23.543665 [info ] [MainThread]:   connect_timeout: None
+[0m18:16:23.544136 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:16:23.544296 [info ] [MainThread]:   retry_all: False
+[0m18:16:23.544476 [info ] [MainThread]:   insecure_mode: False
+[0m18:16:23.544624 [info ] [MainThread]:   reuse_connections: True
+[0m18:16:23.544743 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m18:16:23.544861 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m18:16:23.545284 [info ] [MainThread]: Registered adapter: snowflake=1.11.3
+[0m18:16:23.624553 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:16:23.658437 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:16:23.658688 [debug] [MainThread]: On debug: select 1 as id
+[0m18:16:23.658839 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:16:24.633627 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m18:16:24.634146 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m18:16:24.636756 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:16:24.637215 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m18:16:24.637529 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml> not found
+
+[0m18:16:24.637830 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post AKNWSHL-RKB38605.snowflakecomputing.com.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:16:24.638460 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.5359558, "process_in_blocks": "0", "process_kernel_time": 0.247819, "process_mem_max_rss": "143491072", "process_out_blocks": "0", "process_user_time": 0.966067}
+[0m18:16:24.638921 [debug] [MainThread]: Command `dbt debug` failed at 18:16:24.638819 after 1.54 seconds
+[0m18:16:24.639247 [debug] [MainThread]: Connection 'debug' was left open.
+[0m18:16:24.639491 [debug] [MainThread]: On debug: No close available on handle
+[0m18:16:24.639777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106effb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131f24e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a72360>]}
+[0m18:16:24.640148 [debug] [MainThread]: Flushing usage events
+[0m18:16:25.127132 [debug] [MainThread]: An error was encountered while trying to flush usage events
