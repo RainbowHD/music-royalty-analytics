@@ -1,0 +1,71 @@
+name: dbt CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install dbt
+        run: uv pip install dbt-snowflake==1.7.0 --system
+
+      - name: Create profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << EOF
+          dbt_music_analytics:
+            target: dev
+            outputs:
+              dev:
+                type: snowflake
+                account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+                user: ${{ secrets.SNOWFLAKE_USER }}
+                password: ${{ secrets.SNOWFLAKE_PASSWORD }}
+                role: ${{ secrets.SNOWFLAKE_ROLE }}
+                warehouse: music_wh
+                database: music_db
+                schema: music_schema
+                threads: 4
+          EOF
+
+      - name: dbt debug
+        working-directory: dbt_music_analytics
+        run: dbt debug
+
+      - name: dbt run
+        working-directory: dbt_music_analytics
+        run: dbt run
+
+      - name: dbt test
+        working-directory: dbt_music_analytics
+        run: dbt test
+```
+
+---
+
+Now add your Snowflake credentials as GitHub secrets:
+
+1. Go to your repo on GitHub
+2. **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret** for each:
+```
+SNOWFLAKE_ACCOUNT  → AKNWSHL-RKB38605
+SNOWFLAKE_USER     → RAINBOWHD
+SNOWFLAKE_PASSWORD → 580422aA1488.!
+SNOWFLAKE_ROLE     → ACCOUNTADMIN
