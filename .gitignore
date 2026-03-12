@@ -5,9 +5,17 @@ build/
 dist/
 wheels/
 *.egg-info
+.env
+
+# dbt 
+  dbt/target/
+  dbt/dbt_packages/
+  dbt/logs/
+  profiles.yml
 
 # Virtual environments
 .venv
 
 # Data 
 data/
+

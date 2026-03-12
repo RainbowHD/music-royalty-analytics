@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw
+    database: music_db
+    schema: music_schema
+    tables:
+      - name: royalty_transactions
+        description: 'Raw royalty transactions loaded from S3'
+        columns:
+          - name: ISRC
+            tests:
+              - not_null:
+                  severity: warn
+          - name: VALUE
+            tests:
+              - not_null
+          - name: ROYALTY
+            tests:
+              - not_null

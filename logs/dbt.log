@@ -241,3 +241,51 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m18:16:24.639777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106effb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131f24e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a72360>]}
 [0m18:16:24.640148 [debug] [MainThread]: Flushing usage events
 [0m18:16:25.127132 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:55:03.606607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105396390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061fc4a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061fc1a0>]}
+
+
+============================== 18:55:03.609543 | 614aeeb5-afb9-4673-a76a-775b8b78a1dc ==============================
+[0m18:55:03.609543 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:55:03.609851 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_format': 'default', 'debug': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'introspect': 'True', 'version_check': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'empty': 'None', 'use_colors': 'True', 'fail_fast': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'target_path': 'None', 'profiles_dir': '/Users/admin/.dbt', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'static_parser': 'True', 'no_print': 'None'}
+[0m18:55:03.618880 [info ] [MainThread]: dbt version: 1.11.7
+[0m18:55:03.619086 [info ] [MainThread]: python version: 3.12.11
+[0m18:55:03.619224 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m18:55:03.619352 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m18:55:03.823063 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m18:55:03.823345 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m18:55:03.823494 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m18:55:03.850206 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m18:55:03.850429 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m18:55:03.850571 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m18:55:03.850765 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m18:55:03.851017 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.28154325, "process_in_blocks": "0", "process_kernel_time": 0.143093, "process_mem_max_rss": "125632512", "process_out_blocks": "0", "process_user_time": 0.692204}
+[0m18:55:03.851324 [debug] [MainThread]: Command `dbt debug` failed at 18:55:03.851286 after 0.28 seconds
+[0m18:55:03.851475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10616cb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061fe3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110584410>]}
+[0m18:55:03.851642 [debug] [MainThread]: Flushing usage events
+[0m18:55:04.539699 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:00:37.610506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10657a870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107340590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107340290>]}
+
+
+============================== 19:00:37.613696 | 15dba01f-019f-48c2-a59c-b1558a59227a ==============================
+[0m19:00:37.613696 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:00:37.614011 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_colors': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'log_path': 'logs', 'warn_error': 'None', 'write_json': 'True', 'debug': 'False', 'target_path': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'empty': 'None', 'log_format': 'default', 'log_cache_events': 'False', 'quiet': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/admin/.dbt', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m19:00:37.623786 [info ] [MainThread]: dbt version: 1.11.7
+[0m19:00:37.623982 [info ] [MainThread]: python version: 3.12.11
+[0m19:00:37.624117 [info ] [MainThread]: python path: /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/.venv/bin/python3
+[0m19:00:37.624242 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit
+[0m19:00:37.825159 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:00:37.825456 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:00:37.825622 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:00:37.856604 [info ] [MainThread]: Using profiles dir at /Users/admin/.dbt
+[0m19:00:37.856870 [info ] [MainThread]: Using profiles.yml file at /Users/admin/.dbt/profiles.yml
+[0m19:00:37.857272 [info ] [MainThread]: Using dbt_project.yml file at /Users/admin/Desktop/GitHubProjects/music-royalty-analytics/dbt_project.yml
+[0m19:00:37.857610 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m19:00:37.857944 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.28626654, "process_in_blocks": "0", "process_kernel_time": 0.142745, "process_mem_max_rss": "128647168", "process_out_blocks": "0", "process_user_time": 0.714541}
+[0m19:00:37.858301 [debug] [MainThread]: Command `dbt debug` failed at 19:00:37.858255 after 0.29 seconds
+[0m19:00:37.858470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071f4cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107df48f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10730d580>]}
+[0m19:00:37.858644 [debug] [MainThread]: Flushing usage events
+[0m19:00:38.584510 [debug] [MainThread]: An error was encountered while trying to flush usage events
