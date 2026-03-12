@@ -1,0 +1,12 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+RUN pip install uv
+
+COPY pyproject.toml .
+RUN uv pip install dbt-snowflake==1.7.0 --system
+
+COPY dbt_music_analytics/ ./dbt/
+
+CMD ["dbt", "run", "--project-dir", "dbt", "--profiles-dir", "/profiles"]

@@ -1,0 +1,18 @@
+#version: '3.8'
+
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile.dbt
+    env_file: .env
+    volumes:
+      - ~/.dbt:/profiles:ro
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    env_file: .env
+    ports:
+      - "8501:8501"
