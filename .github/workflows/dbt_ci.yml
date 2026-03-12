@@ -26,23 +26,26 @@ jobs:
         run: uv pip install dbt-snowflake==1.7.0 --system
 
       - name: Create profiles.yml
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
         run: |
           mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml << EOF
-          dbt_music_analytics:
-            target: dev
-            outputs:
-              dev:
-                type: snowflake
-                account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-                user: ${{ secrets.SNOWFLAKE_USER }}
-                password: ${{ secrets.SNOWFLAKE_PASSWORD }}
-                role: ${{ secrets.SNOWFLAKE_ROLE }}
-                warehouse: music_wh
-                database: music_db
-                schema: music_schema
-                threads: 4
-          EOF
+          echo "dbt_music_analytics:" > ~/.dbt/profiles.yml
+          echo "  target: dev" >> ~/.dbt/profiles.yml
+          echo "  outputs:" >> ~/.dbt/profiles.yml
+          echo "    dev:" >> ~/.dbt/profiles.yml
+          echo "      type: snowflake" >> ~/.dbt/profiles.yml
+          echo "      account: ${SNOWFLAKE_ACCOUNT}" >> ~/.dbt/profiles.yml
+          echo "      user: ${SNOWFLAKE_USER}" >> ~/.dbt/profiles.yml
+          echo "      password: ${SNOWFLAKE_PASSWORD}" >> ~/.dbt/profiles.yml
+          echo "      role: ${SNOWFLAKE_ROLE}" >> ~/.dbt/profiles.yml
+          echo "      warehouse: music_wh" >> ~/.dbt/profiles.yml
+          echo "      database: music_db" >> ~/.dbt/profiles.yml
+          echo "      schema: music_schema" >> ~/.dbt/profiles.yml
+          echo "      threads: 4" >> ~/.dbt/profiles.yml
 
       - name: dbt debug
         working-directory: dbt_music_analytics
@@ -55,17 +58,3 @@ jobs:
       - name: dbt test
         working-directory: dbt_music_analytics
         run: dbt test
-```
-
----
-
-Now add your Snowflake credentials as GitHub secrets:
-
-1. Go to your repo on GitHub
-2. **Settings** → **Secrets and variables** → **Actions**
-3. Click **New repository secret** for each:
-```
-SNOWFLAKE_ACCOUNT  → AKNWSHL-RKB38605
-SNOWFLAKE_USER     → RAINBOWHD
-SNOWFLAKE_PASSWORD → 580422aA1488.!
-SNOWFLAKE_ROLE     → ACCOUNTADMIN
