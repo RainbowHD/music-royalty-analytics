@@ -1,10 +1,10 @@
-# 🎵 Music Royalty Analytics Platform
+# Music Royalty Analytics Platform
 
-End-to-end data pipeline for music royalty analysis built as a portfolio project for a Business Data Analyst interview.
+End-to-end data pipeline for music royalty analysis built as a portfolio project.
 
 [![dbt CI](https://github.com/RainbowHD/music-royalty-analytics/actions/workflows/dbt_ci.yml/badge.svg)](https://github.com/RainbowHD/music-royalty-analytics/actions/workflows/dbt_ci.yml)
 
-## 🏗️ Architecture
+## Architecture
 ```mermaid
 flowchart LR
     A[XLSX Dataset] --> B[Python Convert]
@@ -18,7 +18,7 @@ flowchart LR
     J[Docker] -->|Containers| H
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -29,7 +29,7 @@ flowchart LR
 | Containerisation | Docker |
 | CI/CD | GitHub Actions |
 
-## 📊 Data Model
+## Data Model
 ```
 RAW.ROYALTY_TRANSACTIONS        ← exact copy of source CSV
         ↓
@@ -42,14 +42,14 @@ MARTS.MART_STORE_BENCHMARKS     ← DSP performance comparison
 MARTS.MART_DATA_QUALITY         ← ISRC coverage, data health metrics
 ```
 
-## 🔑 Key Business Questions Answered
+## Key Business Questions Answered
 
 - Which stores generate the highest royalty rate?
 - Which labels earn the most royalties?
 - What is the ISRC data quality coverage?
 - How does revenue compare across DSPs?
 
-## 🚀 Quick Start
+## Quick Start
 ```bash
 # Clone the repo
 git clone https://github.com/RainbowHD/music-royalty-analytics.git
@@ -77,7 +77,7 @@ cd ../app
 uv run streamlit run streamlit_app.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 ```
 music-royalty-analytics/
 ├── .github/workflows/     # GitHub Actions CI/CD
@@ -92,9 +92,9 @@ music-royalty-analytics/
 └── docker-compose.yml     # container orchestration
 ```
 
-## 🎯 Domain Context
+## Domain Context
 
 This project uses music royalty data from a digital distributor. Key concepts:
 - **ISRC** — unique identifier per recording (like a barcode for a track)
-- **Royalty Rate** — royalty ÷ value × 100 (varies by store, deal, and format)
+- **Royalty Rate** — varies by store, deal, and format
 - **Deal** — contract type between label and distributor defining payout terms
